@@ -1,0 +1,41 @@
+body{
+	
+	/*background: #EFECCA; #FCFCD4*/
+	background: url(notebook.png) repeat-y;
+	background-position-y: 2px;
+}
+
+textarea {
+ background: transparent;
+     background-position-y: 0px;
+ min-width: 250px; 
+	min-height: 390px; 
+	height: 390px;
+ font: normal 13px verdana;
+ line-height: 25px;
+
+ border: 0px;
+ padding:0px;
+	 outline: 0;
+}
+/*
+::-webkit-resizer {
+    background: url(http://jsfiddle.net/favicon.png);    
+    background-size:100%;   
+/* border: 9px solid rgba(0,0,0,.1); */	
+}
+
+
+
+
+.textAreaStyles{
+	min-width: 250px; 
+	min-height: 390px; 
+	height: 390px;
+	 font-family: "Open Sans", cursive, sans-serif;
+	 background: #EFECCA;
+	 color: #002F2F;
+	 font-size: 14px;
+	 border: 0px;
+	 outline: 0;
+}

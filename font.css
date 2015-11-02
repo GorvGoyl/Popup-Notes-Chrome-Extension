@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arvo'), url(BM-nqL-L5PgjKPDNaleWB_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Kalam'), local('Kalam-Regular'), url(6wE4KkDTwLxfsX94FmTAW6CWcynf_cDxXwCLxiixG1c.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Yesteryear';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yesteryear'), local('Yesteryear-Regular'), url(Y-2_3oNnGXTRT4ySJQfhEL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
