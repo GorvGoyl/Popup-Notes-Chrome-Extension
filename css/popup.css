@@ -1,22 +1,26 @@
 body{
-	
-	/*background: #EFECCA; #FCFCD4*/
-	background: url(../images/notebook.png) repeat-y;
-	background-position-y: 2px;
+	margin:0px;
 }
 
-textarea {
- background: transparent;
-     background-position-y: 0px;
- min-width: 250px; 
-	min-height: 390px; 
-	height: 390px;
- font: normal 13px verdana;
- line-height: 25px;
+.footer{
+	height:25px;
+}
 
- border: 0px;
- padding:0px;
-	 outline: 0;
+.status{
+	
+}
+
+.text-content {
+	background: url(../images/notebook.png) repeat-y;
+    background-position-y: -5px;
+    min-width: 250px;
+    min-height: 296px;
+    font-family: "Times New Roman", Georgia, Serif;
+    font-size: 15px;
+    line-height: 25px;
+    border: 0px;
+    padding: 0px;
+    outline: 0;
 }
 ::-webkit-scrollbar {
     width: 3px;
@@ -35,25 +39,4 @@ textarea {
 }
 ::-webkit-scrollbar-thumb:hover {
     background-color: #F5B200;
-}
-/*
-::-webkit-resizer {
-    background: url(http://jsfiddle.net/favicon.png);    
-    background-size:100%;   
-/* border: 9px solid rgba(0,0,0,.1); */	
-}
-
-
-
-
-.text-content{
-	min-width: 250px; 
-	min-height: 390px; 
-	height: 390px;
-	 font-family: "Open Sans", cursive, sans-serif;
-	 background: #EFECCA;
-	 color: #002F2F;
-	 font-size: 14px;
-	 border: 0px;
-	 outline: 0;
 }
