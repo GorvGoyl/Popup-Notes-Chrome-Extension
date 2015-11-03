@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
   
 	document.addEventListener("keyup", function (e){
 		chrome.storage.sync.set({"notes": textContent.val()}, function() {
+			var Now=new Date();
+			$(".status").html(Now);
 			// Notify that we saved.
 		});
 	});
