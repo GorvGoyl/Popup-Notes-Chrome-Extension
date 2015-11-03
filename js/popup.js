@@ -13,25 +13,19 @@
 // }  
 
 document.addEventListener('DOMContentLoaded', function () {
-   chrome.windows.getCurrent(function(w)  
-  {
-      var button=document.getElementById("txt");
-	  //button.innerHTML="<button onclick='saveChanges()'>Click me</button>";
-	  
-chrome.storage.sync.get("val", function (obj) {
-    button.innerHTML=(obj["val"]);
-
-});
-
-  }); 
+	
+	chrome.windows.getCurrent(function(w){
+		textContent=$(".text-content");
+		chrome.storage.sync.get("notes", function (obj) {
+			textContent.html((obj["notes"]));
+		});
+	}); 
   
-  document.addEventListener("keyup", function (e)
-{
-  chrome.storage.sync.set({"val": txt.value}, function() {
-          // Notify that we saved.
-      
-        });
-});
+	document.addEventListener("keyup", function (e){
+		chrome.storage.sync.set({"notes": textContent.val()}, function() {
+			// Notify that we saved.
+		});
+	});
 });
 
 // function myAlert(){
