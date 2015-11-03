@@ -1,7 +1,7 @@
 body{
 	
 	/*background: #EFECCA; #FCFCD4*/
-	background: url(notebook.png) repeat-y;
+	background: url(../images/notebook.png) repeat-y;
 	background-position-y: 2px;
 }
 
