@@ -1,6 +1,6 @@
 {
 	"background": {
-      "scripts": [ "js/jquery-2.1.4.min.js"]
+      "scripts": []
    },
   "manifest_version": 2,
 
