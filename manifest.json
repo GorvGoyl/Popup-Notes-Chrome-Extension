@@ -4,17 +4,21 @@
    },
   "manifest_version": 2,
 
-  "name": "Getting started example",
-  "description": "This extension shows a Google Image search result for the current page",
+  "name": "Popup Notes",
+  "description": "Make quick notes and sync them. What could be more simple?",
   "version": "1.0",
-
+"icons": {
+      "128": "images/icon.png",
+      "16": "images/icon.png",
+      "48": "images/icon.png"
+   },
   "browser_action": {
     "default_icon": "images/icon.png",
     "default_popup": "popup.html",
-	"default_title": "Take Notes!"
+	"default_title": "Popup Notes!"
   },
   "offline_enabled": true,
   "permissions": [
-	 "storage"
+	 "storage","bookmarks", "contextMenus"
   ]
 }
