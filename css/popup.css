@@ -1,25 +1,28 @@
 body{
 	margin:0px;
 }
-
+.header{
+    min-height:25px;
+}
 .footer{
-	height:25px;
+	min-height:15px;
 }
 
-.status{
-	
+.time{
+	font-size: 11px;
 }
-
+.body{
+    min-height: 300px;
+}
 .text-content {
 	background: url(../images/notebook.png) repeat-y;
-    background-position-y: -5px;
+    background-position-y: 0px;
     min-width: 250px;
-    min-height: 296px;
+    min-height: 301px;
     font: normal 13px verdana;
     line-height: 25px;
     border: 0px;
     padding: 0px;
-    outline: 0;
 }
 ::-webkit-scrollbar {
     width: 3px;
