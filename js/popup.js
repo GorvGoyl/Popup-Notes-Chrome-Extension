@@ -10,22 +10,36 @@
 // });
 
   // });  
-// }  
+// }
 
 document.addEventListener('DOMContentLoaded', function () {
 	
-	chrome.windows.getCurrent(function(w){
+	chrome.windows.getCurrent(function(w) {
+		
 		textContent=$(".text-content");
-		chrome.storage.sync.get("notes", function (obj) {
+		footerTime=$(".time");
+		footerStatus=$(".status");
+
+		chrome.storage.sync.get(["notes","lastUpdate"], function (obj) {
 			textContent.html((obj["notes"]));
+			footerTime.html(obj["lastUpdate"]);
+			footerStatus.html("Welcome..").css("color","deeppink");
 		});
-	}); 
-  
-	document.addEventListener("keyup", function (e){
-		chrome.storage.sync.set({"notes": textContent.val()}, function() {
-			var Now=new Date();
-			$(".status").html(Now);
-			// Notify that we saved.
+	});
+	
+document.addEventListener("keydown",function (e) {
+	footerStatus.html("Taking notes..").css("color","red");
+});
+	
+document.addEventListener("keyup", function (e) {
+    
+    var current     =new Date();
+    var lastUpdate  = "Last edited on "+current.getDate()+"-"+current.getMonth()+"-"+current.getFullYear()+" at "+current.getHours()+":"+current.getMinutes()+":"+current.getSeconds();
+	  
+    chrome.storage.sync.set({"notes": textContent.val(),"lastUpdate": lastUpdate}, function() {
+		
+		footerStatus.html("Saved..").css("color","green");
+		footerTime.html(lastUpdate);
 		});
 	});
 });
