@@ -22,6 +22,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 	
 	document.addEventListener("keydown",function (e) {
+		var keyCode = e.which;
+		if (keyCode == 9) {
+			e.preventDefault();
+			var start = textContent.get(0).selectionStart;
+			var end = textContent.get(0).selectionEnd;
+			textContent.val(textContent.val().substring(0, start) + "\t" + textContent.val().substring(end));
+			setCursor("text-content", end+1, end+1);
+		}
 		footerStatus.html("Taking notes..").css("color","red");
 	});
 	
