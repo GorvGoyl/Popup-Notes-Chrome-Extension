@@ -11,6 +11,11 @@ body{
 .time{
 	font-size: 11px;
 }
+
+.status{
+	float:right;
+}
+
 .body{
     min-height: 300px;
 }
@@ -23,6 +28,7 @@ body{
     line-height: 25px;
     border: 0px;
     padding: 0px;
+	outline:0;
 }
 ::-webkit-scrollbar {
     width: 3px;
