@@ -1,3 +1,4 @@
+/* Authors : Nitish Singh and Gourav Goyal */
 body{
 	margin:0px;
 }
@@ -27,7 +28,7 @@ body{
     font: normal 13px verdana;
     line-height: 25px;
     border: 0px;
-    padding: 0px;
+    /*padding: 0px;*/
 	outline:0;
 }
 ::-webkit-scrollbar {
