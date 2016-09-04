@@ -1,0 +1,31 @@
+/* Authors : Nitish Singh & Gourav Goyal */
+
+body {
+    margin: 0px;
+    min-height: 300px;
+}
+
+.ta_content_cls {
+    font-family: "Comic Sans Ms";
+    background: url(../images/notebook.png) repeat-y;
+    background-position-y: 0px;
+    min-width: 250px;
+    min-height: 301px;
+    line-height: 25px;
+    border: 0px;
+    outline: 0;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #E2A911;
+    border-radius: 34px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #F5B200;
+}
