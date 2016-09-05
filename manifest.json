@@ -20,8 +20,8 @@
         "default_title": "Popup Notes!"
     },
     "offline_enabled": true,
-	"short_name": "Popup Notes",
+    "short_name": "Popup Notes",
     "permissions": [
-        "storage", "bookmarks", "contextMenus"
+        "storage", "contextMenus"
     ]
 }

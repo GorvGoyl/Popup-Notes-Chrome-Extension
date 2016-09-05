@@ -43,28 +43,17 @@ var jgPopupClass = function () {
         setCursor(end + 1);
     }
     var keydownHandler = function (e) {
-
         //support for tab key
         var keyCode = e.which;
         if (keyCode == 9) {
             insertTab(e);
         }
-
         saveContent();
     }
 
     var setContent = function () {
-        var notes = "";
         chrome.storage.local.get(["jgNotes"], function (obj) {
-            notes = $.trim(obj["jgNotes"]);
-
-            if (!notes) {
-                // notes not found in local storage.. check in sync storage i.e..user logged in to different machine
-                chrome.storage.sync.get(["jgNotes"], function (obj) {
-                    notes = $.trim(obj["jgNotes"]);
-                });
-            }
-
+            var notes = $.trim(obj["jgNotes"]);
             notes = notes ? notes + '\n' : '';
             ta_contentRef.val(notes);
             // save content in sync storage in case of quota exceeded last time.
@@ -73,8 +62,6 @@ var jgPopupClass = function () {
         });
     }
 
-
-
     // save  notes in local as well as sync storage
     var saveContent = function () {
         var notes = ta_contentRef.val();
@@ -82,14 +69,14 @@ var jgPopupClass = function () {
             'jgNotes': notes
         });
 
-        chrome.storage.sync.set({
-            'jgNotes': notes
-        }, function callback(result) {
-            if (chrome.runtime.lastError) {
-                console.log('max write operations/minute quota exceeded!');
-            }
-
-        });
+        // chrome.storage.sync.set({
+        //     'jgNotes': notes
+        // }, function callback(result) {
+        //     if (chrome.runtime.lastError) {
+        //         console.log('max write operations/minute quota exceeded!');
+        //     }
+        //
+        // });
     }
 };
 
