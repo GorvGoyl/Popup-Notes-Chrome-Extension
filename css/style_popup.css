@@ -9,11 +9,13 @@ body {
     font-family: "Comic Sans Ms";
     background: url(../images/notebook.png) repeat-y;
     background-position-y: 0px;
-    min-width: 250px;
-    min-height: 301px;
+    min-width: 260px;
+    min-height: 330px;
     line-height: 25px;
     border: 0px;
     outline: 0;
+	font-size: 15px;
+	resize:both;
 }
 
 ::-webkit-scrollbar {
