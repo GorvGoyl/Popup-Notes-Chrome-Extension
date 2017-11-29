@@ -25,6 +25,29 @@ function callback(obj, sender, sendResponse) {
     return true;
 }
 
+chrome.contextMenus.create({
+    title: "Copy text to Popup Notes", 
+    contexts:["selection"], 
+    onclick: copyHandler,
+  });
+  chrome.contextMenus.create({
+    title: "Copy address to Popup Notes", 
+    contexts:[ "link"], 
+    onclick: copyHandler,
+  });
+function copyHandler(e){
+    let text;
+    if (e.selectionText) {
+        text=e.selectionText;
+    }else if (e.linkUrl) {
+        // The user wants to buzz a link.
+        text = e.linkUrl;
+    }
+getContent(function(notes){
+notes = notes+text;
+saveContent(notes);
+});
+}
 function closeEvent(){
     let notes;
     var views = chrome.extension.getViews({
@@ -40,7 +63,7 @@ function getContent(sendResponse) {
     chrome.storage.local.get(["jgNotes"], function (obj) {
         var notes = $.trim(obj["jgNotes"]);
         notes = notes ? notes + '\n' : '';
-        sendResponse(notes);
+        if(typeof sendResponse === "function") sendResponse(notes);
     });
 }
 
